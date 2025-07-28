@@ -1,0 +1,89 @@
+
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Velora</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<script>
+  const btn = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 300);
+  });
+</script>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Velora</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<header class="hero home-hero">
+  <div class="hero-content">
+    <h1>Your World of Essentials</h1>
+    <p>Discover carefully curated collections across fashion, tech, beauty and more.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </div>
+  <img src="https://plus.unsplash.com/premium_photo-1672883551967-ab11316526b4?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D" alt="Showcase" class="hero-img">
+</header>
+<section class="features">
+  <div class="feature">
+    <h3>Fast Shipping</h3>
+    <p>Get your orders in 2–5 days worldwide.</p>
+  </div>
+  <div class="feature">
+    <h3>Premium Quality</h3>
+    <p>Handpicked products from trusted brands.</p>
+  </div>
+  <div class="feature">
+    <h3>Secure Payments</h3>
+    <p>Shop with peace of mind.</p>
+  </div>
+</section>
+
+<div class="category-grid">
+  <div class="category-card">
+    <img src="https://media.istockphoto.com/id/1414036043/photo/rack-with-different-stylish-clothes-and-bag-on-pale-pink-background.jpg?s=612x612&w=0&k=20&c=fDA2LAOZASyTxJVWASf4-RZ_t4E9IQAl2LTXuhCwldU=" alt="Clothing">
+    <h3>Clothing</h3>
+  </div>
+  <div class="category-card">
+    <img src="https://media.istockphoto.com/id/1004202502/photo/the-more-shoes-the-harder-the-decision.jpg?s=612x612&w=0&k=20&c=jGLG0-pJjJItdmOIE9Nbo2LpBK3I2fUJ9CKOhVhyI5U=" alt="Shoes">
+    <h3>Shoes</h3>
+  </div>
+  <div class="category-card">
+    <img src="https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlY3Ryb25pYyUyMGRldmljZXN8ZW58MHx8MHx8fDA%3D" alt="Gadgets">
+    <h3>Gadgets</h3>
+  </div>
+<section class="categories">
+  
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <blockquote>
+    “Velora has transformed the way I shop online! Great quality and fast delivery.”  
+    <span>— Ada, Lagos</span>
+  </blockquote>
+</section>
+
+
+<a href="#top" class="back-to-top">↑ Back to Top</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Velora. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

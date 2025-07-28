@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velora | Products</title>
+  <link rel="stylesheet" href="products.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Velora</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <button class="active" onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('clothing')">Clothing</button>
+    <button onclick="filterProducts('shoes')">Shoes</button>
+    <button onclick="filterProducts('gadgets')">Gadgets</button>
+    <button onclick="filterProducts('appliances')">Appliances</button>
+    <button onclick="filterProducts('beauty')">Beauty</button>
+    <button onclick="filterProducts('art')">Art</button>
+    <button onclick="filterProducts('watches')">Watches</button>
+  </section>
+
+  <section class="product-grid">
+    <div class="product-card clothing">
+      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amFja2V0fGVufDB8fDB8fHww" alt="Clothing" />
+      <div class="product-info">
+        <h3>Stylish Jackets</h3>
+        <p>Warm, durable and trendy for any occasion.</p>
+      </div>
+    </div>
+
+    <div class="product-card shoes">
+      <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cnVubmluZyUyMHNob2VzfGVufDB8fDB8fHww" alt="Shoes" />
+      <div class="product-info">
+        <h3>Running Shoes</h3>
+        <p>Comfort meets performance in every step.</p>
+      </div>
+    </div>
+
+    <div class="product-card gadgets">
+      <img src="https://images.unsplash.com/photo-1704298957507-58723920474f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="Gadgets" />
+      <div class="product-info">
+        <h3>Smart Watch</h3>
+        <p>Track fitness, calls, and notifications.</p>
+      </div>
+    </div>
+
+    <div class="product-card appliances">
+      <img src="https://plus.unsplash.com/premium_photo-1718479227146-28ddc417ced3?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z2FkZ2V0fGVufDB8fDB8fHww" alt="Appliances" />
+      <div class="product-info">
+        <h3>Blender Pro</h3>
+        <p>Efficient and powerful blending for smoothies and more.</p>
+      </div>
+    </div>
+
+    <div class="product-card beauty">
+      <img src="https://media.istockphoto.com/id/821663580/photo/green-cosmetic-arrangement.jpg?s=612x612&w=0&k=20&c=t9ZS3_XtZ8F1La8AKuGASWLTt44LIPi0TJAMXNlG-H4=" alt="Beauty Products" />
+      <div class="product-info">
+        <h3>Skin Care Kit</h3>
+        <p>Hydrate and nourish your skin daily.</p>
+      </div>
+    </div>
+
+    <div class="product-card art">
+      <img src="https://media.istockphoto.com/id/812922860/photo/paint-supplies.jpg?s=612x612&w=0&k=20&c=KvQOYOXmcNfo6Qpx99z6rfLIOexbw8_rJL7m_lIVDMc=" alt="Art Supplies" />
+      <div class="product-info">
+        <h3>Brush Set</h3>
+        <p>Premium brushes for all your creative needs.</p>
+      </div>
+    </div>
+
+    <div class="product-card watches">
+      <img src="https://media.istockphoto.com/id/2153293465/photo/golden-watch.jpg?s=612x612&w=0&k=20&c=TIAcotX2UWNcoWgB_LLPSJRKE_evrsWtBDQFcuLYI0s=" alt="Watches" />
+      <div class="product-info">
+        <h3>Classic Watch</h3>
+        <p>Elegance in every second with timeless design.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filters button');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
