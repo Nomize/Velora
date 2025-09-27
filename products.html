@@ -1,116 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velora | Products</title>
-  <link rel="stylesheet" href="products.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products | Velora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Velora</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-         <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
+
+  <!-- Header / Nav -->
+  <header class="navbar">
+    <div class="container" style="width:100%; display:flex; align-items:center; justify-content:space-between;">
+      <a class="logo" href="index.html">Velora</a>
+
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html" aria-current="page">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="cart-count" title="Cart">0</span></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="filters">
-    <button class="active" onclick="filterProducts('all')">All</button>
-    <button onclick="filterProducts('clothing')">Clothing</button>
-    <button onclick="filterProducts('shoes')">Shoes</button>
-    <button onclick="filterProducts('gadgets')">Gadgets</button>
-    <button onclick="filterProducts('appliances')">Appliances</button>
-    <button onclick="filterProducts('beauty')">Beauty</button>
-    <button onclick="filterProducts('art')">Art</button>
-    <button onclick="filterProducts('watches')">Watches</button>
-  </section>
-
-  <section class="product-grid">
-    <div class="product-card clothing">
-      <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amFja2V0fGVufDB8fDB8fHww" alt="Clothing" />
-      <div class="product-info">
-        <h3>Stylish Jackets</h3>
-        <p>Warm, durable and trendy for any occasion.</p>
+  <main>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Our Products</h1>
+        <p>Discover carefully curated items that merge style with functionality.</p>
       </div>
-    </div>
+    </header>
 
-    <div class="product-card shoes">
-      <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cnVubmluZyUyMHNob2VzfGVufDB8fDB8fHww" alt="Shoes" />
-      <div class="product-info">
-        <h3>Running Shoes</h3>
-        <p>Comfort meets performance in every step.</p>
+    <!-- Search & Filters -->
+    <section class="section filters">
+      <div class="container centered">
+        <input type="text" id="search" placeholder="Search products..." />
+        <div style="margin-top:1rem;">
+          <button onclick="filterProducts('all')" class="active">All</button>
+          <button onclick="filterProducts('fashion')">Fashion</button>
+          <button onclick="filterProducts('tech')">Tech</button>
+          <button onclick="filterProducts('lifestyle')">Lifestyle</button>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="product-card gadgets">
-      <img src="https://images.unsplash.com/photo-1704298957507-58723920474f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="Gadgets" />
-      <div class="product-info">
-        <h3>Smart Watch</h3>
-        <p>Track fitness, calls, and notifications.</p>
-      </div>
-    </div>
+    <!-- Product Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="product-grid">
 
-    <div class="product-card appliances">
-      <img src="https://plus.unsplash.com/premium_photo-1718479227146-28ddc417ced3?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z2FkZ2V0fGVufDB8fDB8fHww" alt="Appliances" />
-      <div class="product-info">
-        <h3>Blender Pro</h3>
-        <p>Efficient and powerful blending for smoothies and more.</p>
-      </div>
-    </div>
+          <!-- Product 1 -->
+          <article class="product-card fashion">
+            <img src="https://media.istockphoto.com/id/2177035077/photo/3d-rendering-e-commerce-shopping-picture.jpg?s=612x612&w=0&k=20&c=P3faRd60NAwH6h25s4zQLzRrg2bVEhMVpOeVKvoh2a4=" alt="Velora Tote Bag">
+            <div class="product-info">
+              <h3>Velora Tote Bag</h3>
+              <p>Elegant and durable everyday carry.</p>
+              <p class="price">$49</p>
+              <button class="add-to-cart btn"
+                data-name="Velora Tote Bag"
+                data-price="49"
+                data-img="https://media.istockphoto.com/id/2177035077/photo/3d-rendering-e-commerce-shopping-picture.jpg?s=612x612&w=0&k=20&c=P3faRd60NAwH6h25s4zQLzRrg2bVEhMVpOeVKvoh2a4=">
+                Add to Cart 
+              </button>
+            </div>
+          </article>
 
-    <div class="product-card beauty">
-      <img src="https://media.istockphoto.com/id/821663580/photo/green-cosmetic-arrangement.jpg?s=612x612&w=0&k=20&c=t9ZS3_XtZ8F1La8AKuGASWLTt44LIPi0TJAMXNlG-H4=" alt="Beauty Products" />
-      <div class="product-info">
-        <h3>Skin Care Kit</h3>
-        <p>Hydrate and nourish your skin daily.</p>
-      </div>
-    </div>
+          <!-- Product 2 -->
+          <article class="product-card tech">
+            <img src="https://media.istockphoto.com/id/539215939/photo/smart-watch-displaying-apps-icons.jpg?s=612x612&w=0&k=20&c=UDzsj2q3lGPYpYGsPWKahQp09AoAhX21CIV5_8LCtl0=" alt="Smartwatch">
+            <div class="product-info">
+              <h3>Smart watch</h3>
+              <p>Track health, stay connected in style.</p>
+              <p class="price">$129</p>
+              <button class="add-to-cart btn"
+                data-name="Smart watch"
+                data-price="129"
+                data-img="https://media.istockphoto.com/id/539215939/photo/smart-watch-displaying-apps-icons.jpg?s=612x612&w=0&k=20&c=UDzsj2q3lGPYpYGsPWKahQp09AoAhX21CIV5_8LCtl0=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
 
-    <div class="product-card art">
-      <img src="https://media.istockphoto.com/id/812922860/photo/paint-supplies.jpg?s=612x612&w=0&k=20&c=KvQOYOXmcNfo6Qpx99z6rfLIOexbw8_rJL7m_lIVDMc=" alt="Art Supplies" />
-      <div class="product-info">
-        <h3>Brush Set</h3>
-        <p>Premium brushes for all your creative needs.</p>
-      </div>
-    </div>
+          <!-- Product 3 -->
+          <article class="product-card lifestyle">
+            <img src="https://media.istockphoto.com/id/2199370500/photo/mock-up-of-aroma-soy-candle-in-amber-glass-jar-on-natural-stone-pedestal-scented-cozy.jpg?s=612x612&w=0&k=20&c=sci7w_X8nY4itcy-11Ohe6FIJupJ5NZ8Lx2EM96diec=" alt="Aromatic Candle">
+            <div class="product-info">
+              <h3>Aromatic Candle</h3>
+              <p>Calming scent for mindful evenings.</p>
+              <p class="price">$25</p>
+              <button class="add-to-cart btn"
+                data-name="Aromatic Candle"
+                data-price="25"
+                data-img="https://media.istockphoto.com/id/2199370500/photo/mock-up-of-aroma-soy-candle-in-amber-glass-jar-on-natural-stone-pedestal-scented-cozy.jpg?s=612x612&w=0&k=20&c=sci7w_X8nY4itcy-11Ohe6FIJupJ5NZ8Lx2EM96diec=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
 
-    <div class="product-card watches">
-      <img src="https://media.istockphoto.com/id/2153293465/photo/golden-watch.jpg?s=612x612&w=0&k=20&c=TIAcotX2UWNcoWgB_LLPSJRKE_evrsWtBDQFcuLYI0s=" alt="Watches" />
-      <div class="product-info">
-        <h3>Classic Watch</h3>
-        <p>Elegance in every second with timeless design.</p>
-      </div>
-    </div>
-  </section>
+          <!-- Product 4 -->
+          <article class="product-card fashion">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700&auto=format&fit=crop&q=60" alt="Stylish Jacket">
+            <div class="product-info">
+              <h3>Stylish Jacket</h3>
+              <p>Warm, durable and trendy for any occasion.</p>
+              <p class="price">$89</p>
+              <button class="add-to-cart btn"
+                data-name="Stylish Jacket"
+                data-price="89"
+                data-img="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700&auto=format&fit=crop&q=60">
+                Add to Cart
+              </button>
+            </div>
+          </article>
 
-  <script>
-    function filterProducts(category) {
-      const cards = document.querySelectorAll('.product-card');
-      const buttons = document.querySelectorAll('.filters button');
+          <!-- Product 5 -->
+          <article class="product-card fashion">
+            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&auto=format&fit=crop&q=60" alt="Running Shoes">
+            <div class="product-info">
+              <h3>Running Shoes</h3>
+              <p>Comfort meets performance in every step.</p>
+              <p class="price">$75</p>
+              <button class="add-to-cart btn"
+                data-name="Running Shoes"
+                data-price="75"
+                data-img="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=700&auto=format&fit=crop&q=60">
+                Add to Cart
+              </button>
+            </div>
+          </article>
 
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+          <!-- Product 6 -->
+          <article class="product-card health">
+            <img src="https://media.istockphoto.com/id/1274950193/photo/group-of-different-exercising-equipment-on-white-home-gym-floor-fitness-ball-round-foam.jpg?s=612x612&w=0&k=20&c=Jj_MEvqbR7jEFWLkcz-ElP27P-5ZL6uqhP0UxVLc4IA=" alt="Smart Watch">
+            <div class="product-info">
+              <h3>Fitness gear</h3>
+              <p>Stay fit and improve health.</p>
+              <p class="price">$139</p>
+              <button class="add-to-cart btn"
+                data-name="Fitness gear"
+                data-price="139"
+                data-img="https://media.istockphoto.com/id/1274950193/photo/group-of-different-exercising-equipment-on-white-home-gym-floor-fitness-ball-round-foam.jpg?s=612x612&w=0&k=20&c=Jj_MEvqbR7jEFWLkcz-ElP27P-5ZL6uqhP0UxVLc4IA=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
 
-      cards.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
+          <!-- Product 7 -->
+          <article class="product-card appliances">
+            <img src="https://plus.unsplash.com/premium_photo-1718479227146-28ddc417ced3?w=700&auto=format&fit=crop&q=60" alt="Blender Pro">
+            <div class="product-info">
+              <h3>Blender Pro</h3>
+              <p>Efficient and powerful blending for smoothies and more.</p>
+              <p class="price">$99</p>
+              <button class="add-to-cart btn"
+                data-name="Blender Pro"
+                data-price="99"
+                data-img="https://plus.unsplash.com/premium_photo-1718479227146-28ddc417ced3?w=700&auto=format&fit=crop&q=60">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 8 -->
+          <article class="product-card beauty">
+            <img src="https://media.istockphoto.com/id/821663580/photo/green-cosmetic-arrangement.jpg?s=612x612&w=0&k=20&c=t9ZS3_XtZ8F1La8AKuGASWLTt44LIPi0TJAMXNlG-H4=" alt="Skin Care Kit">
+            <div class="product-info">
+              <h3>Skin Care Kit</h3>
+              <p>Hydrate and nourish your skin daily.</p>
+              <p class="price">$55</p>
+              <button class="add-to-cart btn"
+                data-name="Skin Care Kit"
+                data-price="55"
+                data-img="https://media.istockphoto.com/id/821663580/photo/green-cosmetic-arrangement.jpg?s=612x612&w=0&k=20&c=t9ZS3_XtZ8F1La8AKuGASWLTt44LIPi0TJAMXNlG-H4=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 9 -->
+          <article class="product-card art">
+            <img src="https://media.istockphoto.com/id/812922860/photo/paint-supplies.jpg?s=612x612&w=0&k=20&c=KvQOYOXmcNfo6Qpx99z6rfLIOexbw8_rJL7m_lIVDMc=" alt="Brush Set">
+            <div class="product-info">
+              <h3>Brush Set</h3>
+              <p>Premium brushes for all your creative needs.</p>
+              <p class="price">$35</p>
+              <button class="add-to-cart btn"
+                data-name="Brush Set"
+                data-price="35"
+                data-img="https://media.istockphoto.com/id/812922860/photo/paint-supplies.jpg?s=612x612&w=0&k=20&c=KvQOYOXmcNfo6Qpx99z6rfLIOexbw8_rJL7m_lIVDMc=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 10 -->
+          <article class="product-card watches">
+            <img src="https://media.istockphoto.com/id/2153293465/photo/golden-watch.jpg?s=612x612&w=0&k=20&c=TIAcotX2UWNcoWgB_LLPSJRKE_evrsWtBDQFcuLYI0s=" alt="Classic Watch">
+            <div class="product-info">
+              <h3>Classic Watch</h3>
+              <p>Elegance in every second with timeless design.</p>
+              <p class="price">$199</p>
+              <button class="add-to-cart btn"
+                data-name="Classic Watch"
+                data-price="199"
+                data-img="https://media.istockphoto.com/id/2153293465/photo/golden-watch.jpg?s=612x612&w=0&k=20&c=TIAcotX2UWNcoWgB_LLPSJRKE_evrsWtBDQFcuLYI0s=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 11 -->
+          <article class="product-card fashion">
+            <img src="https://media.istockphoto.com/id/1463324127/photo/background-image-of-clothing-racks-with-autumn-fashion-collection-in-boutique.jpg?s=612x612&w=0&k=20&c=t92tQEyn3Nvbxh0eKOi3FQruoWHJSyVUhbPBleLe9b0=" alt="Clothing">
+            <div class="product-info">
+              <h3>Clothing</h3>
+              <p>Comfortable and sustainable wear.</p>
+              <p class="price">$69</p>
+              <button class="add-to-cart btn"
+                data-name="Clothing"
+                data-price="69"
+                data-img="https://media.istockphoto.com/id/1463324127/photo/background-image-of-clothing-racks-with-autumn-fashion-collection-in-boutique.jpg?s=612x612&w=0&k=20&c=t92tQEyn3Nvbxh0eKOi3FQruoWHJSyVUhbPBleLe9b0=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 12 -->
+          <article class="product-card fashion">
+            <img src="https://media.istockphoto.com/id/1216415029/photo/footwear.jpg?s=612x612&w=0&k=20&c=-3QKKTXiG9D63senvl-YPz9QQQJVBcE1CS_EGhuuEeM=" alt="Shoes">
+            <div class="product-info">
+              <h3>Shoes</h3>
+              <p>Eco-crafted and built to last.</p>
+              <p class="price">$79</p>
+              <button class="add-to-cart btn"
+                data-name="Shoes"
+                data-price="79"
+                data-img="https://media.istockphoto.com/id/1216415029/photo/footwear.jpg?s=612x612&w=0&k=20&c=-3QKKTXiG9D63senvl-YPz9QQQJVBcE1CS_EGhuuEeM=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 13 -->
+          <article class="product-card gadgets">
+            <img src="https://media.istockphoto.com/id/1400570369/photo/old-computers-digital-tablets-mobile-phones-many-used-electronic-gadgets-devices-broken.jpg?s=612x612&w=0&k=20&c=hTH7vKZphyeXnT-MM484pS_54GH6j9O7Ev2QyMkxzTQ=" alt="Gadgets">
+            <div class="product-info">
+              <h3>Gadgets</h3>
+              <p>Smart living with greener tech.</p>
+              <p class="price">$149</p>
+              <button class="add-to-cart btn"
+                data-name="Gadgets"
+                data-price="149"
+                data-img="https://media.istockphoto.com/id/1400570369/photo/old-computers-digital-tablets-mobile-phones-many-used-electronic-gadgets-devices-broken.jpg?s=612x612&w=0&k=20&c=hTH7vKZphyeXnT-MM484pS_54GH6j9O7Ev2QyMkxzTQ=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 14 -->
+          <article class="product-card appliances">
+            <img src="https://media.istockphoto.com/id/827098826/photo/home-appliances-household-kitchen-technics-in-the-empty-room.jpg?s=612x612&w=0&k=20&c=ZLZY6g5EeTxi4qNyhhW1rZP99nqRBK9gcX6O-ZseNuw=" alt="Appliances">
+            <div class="product-info">
+              <h3>Appliances</h3>
+              <p>Efficient solutions for every home.</p>
+              <p class="price">$249</p>
+              <button class="add-to-cart btn"
+                data-name="Appliances"
+                data-price="249"
+                data-img="https://media.istockphoto.com/id/827098826/photo/home-appliances-household-kitchen-technics-in-the-empty-room.jpg?s=612x612&w=0&k=20&c=ZLZY6g5EeTxi4qNyhhW1rZP99nqRBK9gcX6O-ZseNuw=">
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 15 -->
+          <article class="product-card art">
+            <img src="https://media.istockphoto.com/id/831034638/photo/set-of-different-drawing-tools-on-brown-craft-paper-background-top-view.jpg?s=612x612&w=0&k=20&c=mVrSn2hGwn3eaYN8kQNQm9j26hyO9aogxu70FCTgMKw=" alt="Art Supplies">
+            <div class="product-info">
+              <h3>Art Supplies</h3>
+              <p>Decor made with purpose and passion.</p>
+              <p class="price">$45</p>
+              <button class="add-to-cart btn"
+                data-name="Art Supplies"
+                data-price="45"
+                data-img="https://media.istockphoto.com/id/831034638/photo/set-of-different-drawing-tools-on-brown-craft-paper-background-top-view.jpg?s=612x612&w=0&k=20&c=mVrSn2hGwn3eaYN8kQNQm9j26hyO9aogxu70FCTgMKw=">
+                Add to Cart
+              </button>
+            </div>
+          </article
+
+    </div> <!-- close .product-grid -->
+      </div> <!-- close .container -->
+    </section>
+  </main>
+
+  <!-- Link to JS file -->
+  <script src="script.js"></script>
 </body>
-
 </html>

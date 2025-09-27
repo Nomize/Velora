@@ -1,91 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact | Velora</title>
-  <link rel="stylesheet" href="contact.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Velora</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
+  <!-- Header / Nav -->
+  <header class="navbar">
+    <div class="container" style="width:100%; display:flex; align-items:center; justify-content:space-between;">
+      <a class="logo" href="index.html">Velora</a>
+
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><span class="cart-count" title="Cart">0</span></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h1 class="page-title">Let’s Connect</h1>
-      <p class="page-subtitle">We’d love to hear from you. Reach out via the form or contact info below.</p>
-    </div>
-  </section>
-
-  <section class="contact-section">
-    <div class="container contact-grid">
-
-      <!-- Contact Form -->
-      <div class="form-box">
-        <form action="#" method="POST">
-          <div class="input-group">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Your Email" required>
-          </div>
-          <div class="input-group">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+  <main>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Get in touch with the Velora team.</p>
       </div>
+    </header>
 
-      <!-- Contact Info -->
-      <div class="info-box">
-        <div class="info-item">
-          <h4>Email</h4>
-          <p>hello@velora.co</p>
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div style="flex:1; min-width:300px;">
+          <h2>Send us a Message</h2>
+          <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
         </div>
-        <div class="info-item">
-          <h4>Phone</h4>
-          <p>+234 812 345 6789</p>
-        </div>
-        <div class="info-item">
-          <h4>Location</h4>
-          <p>Lagos, Nigeria</p>
-        </div>
-        <div class="info-item">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+        <div style="flex:1; min-width:300px;">
+          <h2>Our Info</h2>
+          <p><strong>Email:</strong> hello@velora.com</p>
+          <p><strong>Phone:</strong> +234 812 345 6789</p>
+          <p><strong>Location:</strong> Lagos, Nigeria</p>
+
+          <!-- Optional Map -->
+          <div style="margin-top:1rem;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.951234066102!2d3.3792!3d6.5244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8aff!2sLagos!5e0!3m2!1sen!2sng!4v1614787556433!5m2!1sen!2sng" 
+              width="100%" 
+              height="250" 
+              style="border:0; border-radius:10px;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
+  <!-- Back to Top -->
+  <div class="back-to-top" aria-hidden="true">↑</div>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container centered">
       <p>&copy; 2025 Velora. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

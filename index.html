@@ -1,89 +1,151 @@
-
-<<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Velora</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Velora | Your World of Essentials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-  const btn = document.querySelector('.back-to-top');
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('show', window.scrollY > 300);
-  });
-</script>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">Velora</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">gallery</a></li>
-      </ul>
+<body class="page-home">
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Velora</a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-<header class="hero home-hero">
-  <div class="hero-content">
-    <h1>Your World of Essentials</h1>
-    <p>Discover carefully curated collections across fashion, tech, beauty and more.</p>
-    <a href="products.html" class="btn">Shop Now</a>
-  </div>
-  <img src="https://plus.unsplash.com/premium_photo-1672883551967-ab11316526b4?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmd8ZW58MHx8MHx8fDA%3D" alt="Showcase" class="hero-img">
-</header>
-<section class="features">
-  <div class="feature">
-    <h3>Fast Shipping</h3>
-    <p>Get your orders in 2–5 days worldwide.</p>
-  </div>
-  <div class="feature">
-    <h3>Premium Quality</h3>
-    <p>Handpicked products from trusted brands.</p>
-  </div>
-  <div class="feature">
-    <h3>Secure Payments</h3>
-    <p>Shop with peace of mind.</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <main>
+    <section class="hero home-hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Your World of Essentials</h1>
+          <p class="hero-sub">Discover carefully curated collections across fashion, tech, beauty and more — designed for everyday living and made to last.</p>
 
-<div class="category-grid">
-  <div class="category-card">
-    <img src="https://media.istockphoto.com/id/1414036043/photo/rack-with-different-stylish-clothes-and-bag-on-pale-pink-background.jpg?s=612x612&w=0&k=20&c=fDA2LAOZASyTxJVWASf4-RZ_t4E9IQAl2LTXuhCwldU=" alt="Clothing">
-    <h3>Clothing</h3>
-  </div>
-  <div class="category-card">
-    <img src="https://media.istockphoto.com/id/1004202502/photo/the-more-shoes-the-harder-the-decision.jpg?s=612x612&w=0&k=20&c=jGLG0-pJjJItdmOIE9Nbo2LpBK3I2fUJ9CKOhVhyI5U=" alt="Shoes">
-    <h3>Shoes</h3>
-  </div>
-  <div class="category-card">
-    <img src="https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlY3Ryb25pYyUyMGRldmljZXN8ZW58MHx8MHx8fDA%3D" alt="Gadgets">
-    <h3>Gadgets</h3>
-  </div>
-<section class="categories">
-  
-<section class="testimonials">
-  <h2>What Our Customers Say</h2>
-  <blockquote>
-    “Velora has transformed the way I shop online! Great quality and fast delivery.”  
-    <span>— Ada, Lagos</span>
-  </blockquote>
-</section>
+          <div class="hero-cta">
+            <a href="products.html" class="btn btn-primary">Shop New Arrivals</a>
+            <a href="about.html" class="btn btn-outline">Our Story</a>
+          </div>
 
+          <ul class="hero-highlights">
+            <li>Handpicked products</li>
+            <li>Eco-friendly packaging</li>
+            <li>Secure payments</li>
+          </ul>
+        </div>
 
-<a href="#top" class="back-to-top">↑ Back to Top</a>
+        <figure class="hero-media" aria-hidden="true">
+          <img src="https://plus.unsplash.com/premium_photo-1672883551967-ab11316526b4?w=1200&q=60&auto=format&fit=crop" alt="Velora collection showcase" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="image-gallery">
+      <div class="container gallery-grid">
+        <img src="https://media.istockphoto.com/id/2163776835/photo/directly-above-shot-of-clothing-with-purse-and-shoes-on-table.jpg?s=612x612&w=0&k=20&c=Abin3R-MK1QD31fJaz2AiX8loseI8edvUDso30qVKIU=" alt="Fashion accessories" />
+        <img src="https://media.istockphoto.com/id/2216806703/photo/beautiful-burning-candle-and-eucalyptus-branches-on-pale-yellow-background-closeup.jpg?s=612x612&w=0&k=20&c=JuXYDUKUi40tADBKTAS3qPyp6fCGtbTr15KRSbxbuWE=" alt="Lifestyle " />
+        <img src="https://media.istockphoto.com/id/1286099942/photo/close-up-of-hand-touching-smartwatch-with-health-app-on-the-screen-gadget-for-fitness-active.jpg?s=612x612&w=0&k=20&c=zX9Fko_T6qppRO8J8BSYu4DovmLjPFKwi_x6l0GzCq0=" />
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Fast Shipping</h3>
+            <p>Delivery in 2–5 days nationwide with tracked fulfillment.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Premium Quality</h3>
+            <p>Quality-first selection — we test every product before listing.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Secure Payments</h3>
+            <p>Pay securely with cards, wallets, and bank transfers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>“Velora has completely changed my wardrobe. The capsule pieces are timeless and versatile — I get compliments daily.”</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Customer photo">
+              <span>— Sophia L.</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p>“Fast delivery and premium quality products. My smartwatch is sleek, durable, and stylish — worth every penny.”</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Customer photo">
+              <span>— Daniel K.</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p>“Velora is my go-to for gifts. The packaging is eco-friendly and so elegant. My friends always love what I get them.”</p>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Customer photo">
+              <span>— Aisha M.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="site-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Ready to elevate your everyday?</h2>
+          <p>Shop pieces that match your style and simplify your routine.</p>
+        </div>
+        <a href="products.html" class="btn btn-primary">Browse Products</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-hidden="true">↑</button>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Velora. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; 2025 Velora. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </div>
   </footer>
+
+  <!-- Link to JS file -->
+  <script src="script.js"></script>
 </body>
 </html>

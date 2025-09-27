@@ -1,28 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Our Story | Velora</title>
-  <link rel="stylesheet" href="about.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
- <!-- Hero Section -->
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h1>Our Story</h1>
-      <p>Designing smarter fashion and tech for brighter lives.</p>
+
+  <!-- Header / Nav -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="logo" href="index.html">Velora</a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-
   <main>
-    <!-- Mission Section -->
+    <!-- Hero -->
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Our Story</h1>
+        <p>Designing smarter fashion and tech for brighter lives.</p>
+      </div>
+    </header>
+
+    <!-- Mission -->
     <section class="section about">
-      <div class="container">
+      <div class="container flex">
         <div class="text">
           <h2>Our Mission</h2>
           <p>At Velora, we’re committed to creating high-quality, multifunctional products that simplify modern life. From fashion and beauty to tech and tools, we bring you solutions that blend style with innovation.</p>
@@ -33,9 +49,9 @@
       </div>
     </section>
 
-    <!-- Founding Story Section -->
+    <!-- Why We Started -->
     <section class="section story reverse">
-      <div class="container">
+      <div class="container flex">
         <div class="text">
           <h2>Why We Started</h2>
           <p>We began with a simple idea: to bring intentionality back to everyday purchases. Our founders envisioned a space where quality and impact go hand in hand—and that vision became Velora.</p>
@@ -46,38 +62,73 @@
       </div>
     </section>
 
-    <!-- Visual Storytelling Gallery Section -->
+    <!-- Founder Section -->
+    <section class="section founder">
+      <div class="container flex">
+        <div class="image founder-img">
+          <img src="https://media.istockphoto.com/id/2165425187/photo/portrait-of-a-woman-in-an-office.jpg?s=612x612&w=0&k=20&c=ErBZmz5lLoileimLB25dNBB0_88DqoefUIbdll3Q4Xc=" alt="Founder Nomize - Black woman entrepreneur">
+        </div>
+        <div class="text">
+          <h2>Meet Our Founder</h2>
+          <p><strong>Nomize</strong> created Velora with a vision to merge elegance and practicality in everyday essentials. Starting with a passion for sustainable fashion and innovation, she built the brand to empower people through carefully curated collections that bring confidence and comfort.</p>
+          <p>Nomize’s journey began with a small collection of items for close friends and family. Today, Velora has grown into a community-driven brand, known for its values of integrity, global impact, and customer-first approach.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team">
+      <div class="container centered">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://media.istockphoto.com/id/2193895927/photo/confident-professional-woman-looking-aside.jpg?s=612x612&w=0&k=20&c=dX0_dsEmtzt69xY_wK6Te0ZI8pWv0ETgXH3wc1RaUko=" alt="Team member 1">
+            <p><strong>Amaka</strong><br>Head of Design</p>
+          </div>
+          <div class="team-member">
+            <img src="https://media.istockphoto.com/id/2163495637/photo/young-man-sitting-in-coffee-shop-and-using-laptop.jpg?s=612x612&w=0&k=20&c=SErA66o9WrChH1mR3SywoPat556woWe1kpTwEq_8gHg=" alt="Team member 2">
+            <p><strong>David</strong><br>Operations Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="https://media.istockphoto.com/id/2162095372/photo/woman-portrait-and-happy-in-office-with-arms-crossed-fashion-mogul-and-pride-with.jpg?s=612x612&w=0&k=20&c=FAhDIgXyF4k-Hzr_TZa7_QsS38VSsPOmkSLxkD8GDfI=" alt="Team member 3">
+            <p><strong>Lara</strong><br>Marketing Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Storytelling -->
     <section class="section gallery">
       <div class="container centered">
         <h2>Inspired by You</h2>
         <div class="gallery-grid">
-          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80" alt="Modern fashion">
+          <img src="https://media.istockphoto.com/id/942926448/photo/set-of-colored-womens-shoes-on-beige-background.jpg?s=612x612&w=0&k=20&c=OKPtxR0axe8D9mnBEdY63NQT9hiWwN7b8BGjj-YYhBg=" alt="Modern fashion">
           <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=500&q=80" alt="Smart devices">
-          <img src="https://images.unsplash.com/photo-1621605812848-6bcd68eac143?auto=format&fit=crop&w=500&q=80" alt="Lifestyle and design">
+          <img src="https://media.istockphoto.com/id/2165943630/photo/lavender-skin-care-products.jpg?s=612x612&w=0&k=20&c=8RsAP_6StdjBMqzcxZm0Ygbgi4LaBaOY-ke8v1T3ytE=" alt="Lifestyle and design">
           <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80" alt="Tech gear flatlay">
         </div>
       </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- Values -->
     <section class="section values">
       <div class="container centered">
         <h2>Our Values</h2>
         <ul class="values-list">
           <li>
-            <img src="https://img.icons8.com/color/96/light-on.png" alt="Innovation">
+            <img src="https://img.icons8.com/color/96/light-on.png" alt="Innovation icon">
             <p>Innovation</p>
           </li>
           <li>
-            <img src="https://img.icons8.com/color/96/handshake.png" alt="Integrity">
+            <img src="https://img.icons8.com/color/96/handshake.png" alt="Integrity icon">
             <p>Integrity</p>
           </li>
           <li>
-            <img src="https://img.icons8.com/color/96/globe--v2.png" alt="Impact">
+            <img src="https://img.icons8.com/color/96/globe--v2.png" alt="Impact icon">
             <p>Global Impact</p>
           </li>
           <li>
-            <img src="https://img.icons8.com/color/96/customer-support.png" alt="Customer First">
+            <img src="https://img.icons8.com/color/96/customer-support.png" alt="Customer-first icon">
             <p>Customer First</p>
           </li>
         </ul>
@@ -85,10 +136,16 @@
     </section>
   </main>
 
+  <!-- Back to Top -->
+  <div class="back-to-top" aria-hidden="true">↑</div>
+
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Velora. All rights reserved.</p>
+    <div class="container centered">
+      <p>&copy; 2025 Velora. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
-
